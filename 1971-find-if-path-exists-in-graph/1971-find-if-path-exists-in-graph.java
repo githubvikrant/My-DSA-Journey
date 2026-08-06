@@ -30,6 +30,9 @@ class Solution {
                 if(!vis[ele]){
                     q.add(ele);
                     vis[ele] = true;
+                    if(vis[destination] == true){
+                        return true;
+                    }
                 }
             }
         }
