@@ -1,6 +1,6 @@
 class Solution {
     public boolean canFinish(int n, int[][] pre) {
-        //create an adjacency list
+        //create an adjacency list from the given matrix
         List<List<Integer>> adj = new ArrayList<>();
         int[] indegree = new int[n];
         for(int i=0;i<n;i++){
@@ -12,7 +12,7 @@ class Solution {
             indegree[a]++;
         }
 
-        //kahn's algo
+        //kahn's algoritm
        Queue<Integer> q = new LinkedList<>();
        List<Integer> ans = new ArrayList<>();
 
