@@ -8,7 +8,7 @@ class Solution {
 
         int pick = xorSum(nums,index+1,xor ^ nums[index]);
         int notpick = xorSum(nums,index+1,xor);
-        System.out.println(pick + " " + notpick);
+       
         return pick + notpick;
     }
 }
