@@ -3,20 +3,16 @@ class Solution {
         int n = nums.length;
         if(k%n==0) return;
 
-        k = k%n;
         reverse(nums,0,n-1);
-        reverse(nums,0,k-1);
-        reverse(nums,k,n-1);
+        reverse(nums,0,k%n-1);
+        reverse(nums,k%n,n-1);
     }
 
-    void reverse(int[] arr,int start,int end){
-        while(start<end){
-            int temp = arr[start];
-            arr[start] = arr[end];
-            arr[end] = temp;
-
-            end--;
-            start++;
+    void reverse(int[] arr,int s,int e){
+        while(s<e){
+            int t = arr[s];
+            arr[s++] = arr[e];
+            arr[e--] = t;
         }
     }
 }
